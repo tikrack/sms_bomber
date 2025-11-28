@@ -5,10 +5,12 @@ const PHONE_NUMBER = "9030422838";
 
 const runService = async ({ name, headers, api, params }) => {
   try {
-    await axios.post(api, params, {
+    const res = await axios.post(api, params, {
       headers: headers,
       timeout: 8000,
     });
+
+    console.log(res.data);
 
     console.log(chalk.green(`${name} ✓ Success`));
   } catch (err) {
@@ -20,18 +22,24 @@ const runService = async ({ name, headers, api, params }) => {
 const services = [
   {
     name: "Aloghesti",
-    origin: "https://aloghesti.com",
     api: "https://api.aloghesti.com/api/v1/initial-user",
     params: { mobile: "0" + PHONE_NUMBER },
+    headers: {
+      Origin: "https://aloghesti.com",
+    },
     enabled: false,
   },
-
   {
     name: "Ammaryar",
-    origin: "https://ammaryar.ir",
     api: "https://ammaryar.ir/register_ajax",
     params: { mobile: PHONE_NUMBER, conf: 1 },
-    enabled: true,
+    headers: {
+      Origin: "https://ammaryar.ir",
+      Host: "ammaryar.ir",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Content-Length": 24,
+    },
+    enabled: false,
   },
 ];
 
@@ -42,32 +50,6 @@ const services = [
     }
   }
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // {
 //   name: "Snapp",

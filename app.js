@@ -35,7 +35,7 @@ const services = [
     params: { mobile: "0" + PHONE_NUMBER },
     headers: { Origin: "https://aloghesti.com" },
     method: "POST",
-    enabled: false,
+    enabled: true,
   },
   {
     name: "Ammaryar",
@@ -47,7 +47,7 @@ const services = [
       "Content-Type": "application/x-www-form-urlencoded",
     },
     method: "POST",
-    enabled: false,
+    enabled: true,
   },
   {
     name: "Okala",
@@ -69,7 +69,7 @@ const services = [
       "x-user-unique-id": randomUUID(),
     },
     method: "POST",
-    enabled: false,
+    enabled: true,
   },
   {
     name: "Behtarino",
@@ -77,7 +77,7 @@ const services = [
     params: { phone: "0" + PHONE_NUMBER },
     headers: { site: "behtarino" },
     method: "POST",
-    enabled: false,
+    enabled: true,
   },
   {
     name: "Torob",
@@ -96,7 +96,7 @@ const services = [
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
       Accept: "*/*",
     },
-    enabled: false,
+    enabled: true,
   },
   {
     name: "DigikalaJet",
@@ -120,7 +120,7 @@ const services = [
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",
       accept: "application/json, text/plain, */*",
     },
-    enabled: false,
+    enabled: true,
   },
   {
     name: "123Kif",

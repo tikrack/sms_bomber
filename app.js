@@ -2,7 +2,7 @@ import axios from "axios";
 import chalk from "chalk";
 import { randomUUID } from "crypto";
 
-const PHONE_NUMBER = "9030422838";
+const PHONE_NUMBER = "9332459809";
 
 const runService = async ({ name, headers, api, params, method = "POST" }) => {
   try {
